@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,7 +10,7 @@
 
 <body class="bg-gray-100 min-h-screen">
 
-    <!-- Header -->
+
     <header class="bg-indigo-700 text-white shadow-md py-4 px-6 mb-8">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div>
@@ -24,7 +24,6 @@
 
     <main class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-6 pb-12">
 
-        <!-- 1. Search Trains -->
         <div class="bg-white p-6 rounded-xl shadow-md">
             <h3 class="text-lg font-semibold text-indigo-900 mb-4">Search Trains</h3>
             <div class="mb-3">
@@ -43,7 +42,6 @@
             <div id="searchResult" class="mt-4 text-sm"></div>
         </div>
 
-        <!-- 2. Book a Seat -->
         <div class="bg-white p-6 rounded-xl shadow-md">
             <h3 class="text-lg font-semibold text-indigo-900 mb-4">Book a Seat</h3>
             <div class="mb-3">
@@ -62,7 +60,7 @@
             <div id="bookResult" class="mt-4 text-sm"></div>
         </div>
 
-        <!-- 3. Check PNR Status -->
+
         <div class="bg-white p-6 rounded-xl shadow-md">
             <h3 class="text-lg font-semibold text-indigo-900 mb-4">Check PNR Status</h3>
             <div class="mb-4">
@@ -76,7 +74,7 @@
             <div id="pnrResult" class="mt-4 text-sm"></div>
         </div>
 
-        <!-- 4. Cancel Booking (PNR Based) -->
+
         <div class="bg-white p-6 rounded-xl shadow-md">
             <h3 class="text-lg font-semibold text-indigo-900 mb-4">Cancel Booking</h3>
             <div class="mb-4">
@@ -226,6 +224,333 @@
             } catch (err) {
                 resultDiv.innerHTML = '<span class="text-red-600">Connection failed.</span>';
             }
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Booking Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-indigo-700 text-white shadow-md py-4 px-6 mb-8">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-bold">Train Ticket Booking System</h1>
+                <p class="text-indigo-200 text-sm">Professional Production-Grade Dashboard</p>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span id="apiStatus" class="bg-indigo-600 px-3 py-1 rounded-full text-xs font-semibold">Checking
+                    API...</span>
+                <span id="authStatus" class="bg-amber-500 px-3 py-1 rounded-full text-xs font-semibold text-black">Not
+                    Logged In</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-6 pb-12">
+
+        <!-- 0. Login Card -->
+        <div class="bg-white p-6 rounded-xl shadow-md md:col-span-2 border border-indigo-100">
+            <h3 class="text-lg font-semibold text-indigo-900 mb-4">🔐 Authentication (Login First)</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Email / Username</label>
+                    <input type="text" id="loginEmail" value="test@example.com"
+                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                    <input type="password" id="loginPassword" value="dummy_password"
+                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                </div>
+                <button onclick="loginUser()"
+                    class="bg-indigo-600 text-white font-medium py-2 rounded-lg hover:bg-indigo-700 transition">Get JWT
+                    Token</button>
+            </div>
+            <div id="loginResult" class="mt-3 text-sm"></div>
+        </div>
+
+        <!-- 1. Search Trains -->
+        <div class="bg-white p-6 rounded-xl shadow-md">
+            <h3 class="text-lg font-semibold text-indigo-900 mb-4">Search Trains</h3>
+            <div class="mb-3">
+                <label class="block text-sm font-medium text-gray-700 mb-1">Source</label>
+                <input type="text" id="source" placeholder="e.g. Kanpur"
+                    class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700 mb-1">Destination</label>
+                <input type="text" id="destination" placeholder="e.g. Delhi"
+                    class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+            <button onclick="searchTrains()"
+                class="w-full bg-indigo-600 text-white font-medium py-2 rounded-lg hover:bg-indigo-700 transition">Search
+                Trains</button>
+            <div id="searchResult" class="mt-4 max-h-64 overflow-y-auto text-sm"></div>
+        </div>
+
+        <!-- 2. Book a Seat -->
+        <div class="bg-white p-6 rounded-xl shadow-md">
+            <h3 class="text-lg font-semibold text-emerald-900 mb-4">Book a Seat</h3>
+            <div class="mb-3">
+                <label class="block text-sm font-medium text-gray-700 mb-1">Selected Train ID</label>
+                <input type="number" id="bookTrainId" readonly placeholder="Click 'Select' from search results"
+                    class="w-full px-3 py-2 bg-gray-50 border rounded-lg text-gray-600">
+            </div>
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700 mb-1">Choose Available Seat</label>
+                <select id="bookSeatSelect"
+                    class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                    <option value="">-- First select a train --</option>
+                </select>
+            </div>
+            <button onclick="bookSeat()"
+                class="w-full bg-emerald-600 text-white font-medium py-2 rounded-lg hover:bg-emerald-700 transition">Confirm
+                Booking</button>
+            <div id="bookResult" class="mt-4 text-sm"></div>
+        </div>
+
+        <!-- 3. Check PNR Status -->
+        <div class="bg-white p-6 rounded-xl shadow-md">
+            <h3 class="text-lg font-semibold text-amber-900 mb-4">Check PNR Status</h3>
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700 mb-1">PNR Number</label>
+                <input type="text" id="pnrNumber" placeholder="e.g. PNR-ABC12345"
+                    class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+            </div>
+            <button onclick="checkPnr()"
+                class="w-full bg-amber-600 text-white font-medium py-2 rounded-lg hover:bg-amber-700 transition">Fetch
+                PNR Details</button>
+            <div id="pnrResult" class="mt-4 text-sm"></div>
+        </div>
+
+        <!-- 4. Cancel Booking -->
+        <div class="bg-white p-6 rounded-xl shadow-md">
+            <h3 class="text-lg font-semibold text-rose-900 mb-4">Cancel Booking</h3>
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700 mb-1">PNR Number</label>
+                <input type="text" id="cancelPnr" placeholder="e.g. PNR-ABC12345"
+                    class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-500">
+            </div>
+            <button onclick="cancelBooking()"
+                class="w-full bg-rose-600 text-white font-medium py-2 rounded-lg hover:bg-rose-700 transition">Cancel
+                Ticket</button>
+            <div id="cancelResult" class="mt-4 text-sm"></div>
+        </div>
+
+    </main>
+
+    <script>
+        const API_URL = 'http://127.0.0.1:8000';
+
+        window.onload = async () => {
+            const statusBadge = document.getElementById('apiStatus');
+            const authStatus = document.getElementById('authStatus');
+
+            // Check Token in LocalStorage
+            if (localStorage.getItem("access_token")) {
+                authStatus.innerText = "Authenticated (JWT Active)";
+                authStatus.className = "bg-emerald-500 px-3 py-1 rounded-full text-xs font-semibold text-white";
+            }
+
+            try {
+                const res = await fetch(`${API_URL}/`);
+                if (res.ok) {
+                    statusBadge.innerText = "API: Connected";
+                    statusBadge.className = "bg-emerald-600 px-3 py-1 rounded-full text-xs font-semibold text-white";
+                } else { throw new Error(); }
+            } catch (err) {
+                statusBadge.innerText = "API: Connection Failed";
+                statusBadge.className = "bg-rose-600 px-3 py-1 rounded-full text-xs font-semibold text-white";
+            }
+        };
+
+        async function loginUser() {
+            const username = document.getElementById('loginEmail').value.trim();
+            const password = document.getElementById('loginPassword').value.trim();
+            const resultDiv = document.getElementById('loginResult');
+            const authStatus = document.getElementById('authStatus');
+
+            const formData = new URLSearchParams();
+            formData.append('username', username);
+            formData.append('password', password);
+
+            try {
+                const res = await fetch(`${API_URL}/auth/login`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: formData
+                });
+                const data = await res.json();
+                if (res.ok) {
+                    localStorage.setItem("access_token", data.access_token);
+                    resultDiv.innerHTML = `<span class="text-emerald-600 font-semibold">Login Successful! Token stored.</span>`;
+                    authStatus.innerText = "Authenticated (JWT Active)";
+                    authStatus.className = "bg-emerald-500 px-3 py-1 rounded-full text-xs font-semibold text-white";
+                } else {
+                    resultDiv.innerHTML = `<span class="text-red-600">Error: ${data.detail || 'Login failed'}</span>`;
+                }
+            } catch (err) {
+                resultDiv.innerHTML = '<span class="text-red-600">Connection failed.</span>';
+            }
+        }
+
+        async function searchTrains() {
+            const source = document.getElementById('source').value.trim();
+            const destination = document.getElementById('destination').value.trim();
+            const resultDiv = document.getElementById('searchResult');
+
+            if (!source || !destination) {
+                resultDiv.innerHTML = '<span class="text-red-600">Please fill source and destination.</span>';
+                return;
+            }
+
+            try {
+                const res = await fetch(`${API_URL}/trains/search?source=${source}&destination=${destination}`);
+                const data = await res.json();
+                if (res.ok && data.length > 0) {
+                    let html = '<ul class="space-y-2 mt-2">';
+                    data.forEach(train => {
+                        html += `<li class="p-3 bg-indigo-50 rounded-lg border border-indigo-100 flex justify-between items-center">
+                            <div>
+                                <strong class="text-indigo-900">${train.train_name} (${train.train_number})</strong><br>
+                                <span class="text-xs text-gray-600">Route: ${train.source} → ${train.destination}</span><br>
+                                <span class="text-xs font-semibold text-emerald-700">🟢 ${train.available_seats} Seats Available</span>
+                            </div>
+                            <button onclick="selectTrain(${train.id})" class="bg-indigo-600 text-white text-xs px-3 py-1.5 rounded hover:bg-indigo-700 transition">Select</button>
+                        </li>`;
+                    });
+                    html += '</ul>';
+                    resultDiv.innerHTML = html;
+                } else {
+                    resultDiv.innerHTML = '<span class="text-amber-600">No trains found matching this route.</span>';
+                }
+            } catch (err) {
+                resultDiv.innerHTML = '<span class="text-red-600">Failed to connect to server.</span>';
+            }
+        }
+
+        async function selectTrain(trainId) {
+            document.getElementById('bookTrainId').value = trainId;
+            const seatSelect = document.getElementById('bookSeatSelect');
+            seatSelect.innerHTML = '<option value="">Loading available seats...</option>';
+
+            try {
+                const res = await fetch(`${API_URL}/trains/${trainId}/seats`);
+                const seats = await res.json();
+                if (res.ok && seats.length > 0) {
+                    let options = '<option value="">-- Choose a Seat --</option>';
+                    seats.forEach(seat => {
+                        options += `<option value="${seat.id}">Seat: ${seat.seat_number} (${seat.class_type})</option>`;
+                    });
+                    seatSelect.innerHTML = options;
+                } else {
+                    seatSelect.innerHTML = '<option value="">No seats available</option>';
+                }
+            } catch (err) {
+                seatSelect.innerHTML = '<option value="">Error loading seats</option>';
+            }
+        }
+
+        async function bookSeat() {
+            const trainId = document.getElementById('bookTrainId').value;
+            const seatId = document.getElementById('bookSeatSelect').value;
+            const resultDiv = document.getElementById('bookResult');
+            const token = localStorage.getItem("access_token");
+
+            if (!token) {
+                resultDiv.innerHTML = '<span class="text-red-600">Please login first to get a token!</span>';
+                return;
+            }
+
+            if (!trainId || !seatId) {
+                resultDiv.innerHTML = '<span class="text-red-600">Please select a train and a seat.</span>';
+                return;
+            }
+
+            try {
+                const res = await fetch(`${API_URL}/bookings/`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({
+                        train_id: parseInt(trainId),
+                        seat_id: parseInt(seatId)
+                    })
+                });
+                const data = await res.json();
+                if (res.ok) {
+                    resultDiv.innerHTML = `<span class="text-emerald-600 font-semibold">Success! PNR: ${data.pnr_number} | Booking ID: ${data.id}</span>`;
+                    selectTrain(trainId);
+                } else {
+                    resultDiv.innerHTML = `<span class="text-red-600">Error: ${data.detail || 'Booking failed'}</span>`;
+                }
+            } catch (err) {
+                resultDiv.innerHTML = '<span class="text-red-600">Connection failed.</span>';
+            }
+        }
+
+        async function checkPnr() {
+            const pnr = document.getElementById('pnrNumber').value.trim();
+            const resultDiv = document.getElementById('pnrResult');
+            const token = localStorage.getItem("access_token");
+
+            if (!token) { resultDiv.innerHTML = '<span class="text-red-600">Please login first!</span>'; return; }
+            if (!pnr) { resultDiv.innerHTML = '<span class="text-red-600">Enter a PNR number.</span>'; return; }
+
+            try {
+                const res = await fetch(`${API_URL}/bookings/pnr/${pnr}`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                const data = await res.json();
+                if (res.ok) {
+                    resultDiv.innerHTML = `<div class="p-2 bg-amber-50 rounded border border-amber-200">
+                        <strong>PNR:</strong> ${data.pnr_number}<br>
+                        <strong>Train:</strong> ${data.train_name} (${data.train_number})<br>
+                        <strong>Status:</strong> <span class="text-emerald-700 font-bold">${data.booking_status}</span>
+                    </div>`;
+                } else {
+                    resultDiv.innerHTML = `<span class="text-red-600">Error: ${data.detail || 'PNR not found'}</span>`;
+                }
+            } catch (err) { resultDiv.innerHTML = '<span class="text-red-600">Connection failed.</span>'; }
+        }
+
+        async function cancelBooking() {
+            const pnr = document.getElementById('cancelPnr').value.trim();
+            const resultDiv = document.getElementById('cancelResult');
+            const token = localStorage.getItem("access_token");
+
+            if (!token) { resultDiv.innerHTML = '<span class="text-red-600">Please login first!</span>'; return; }
+            if (!pnr) { resultDiv.innerHTML = '<span class="text-red-600">Enter a PNR number.</span>'; return; }
+
+            try {
+                const res = await fetch(`${API_URL}/bookings/cancel/${pnr}`, {
+                    method: 'DELETE',
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                const data = await res.json();
+                if (res.ok) {
+                    resultDiv.innerHTML = `<span class="text-emerald-600 font-semibold">${data.message}</span>`;
+                } else {
+                    resultDiv.innerHTML = `<span class="text-red-600">Error: ${data.detail || 'Cancellation failed'}</span>`;
+                }
+            } catch (err) { resultDiv.innerHTML = '<span class="text-red-600">Connection failed.</span>'; }
         }
     </script>
 </body>

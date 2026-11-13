@@ -1,0 +1,197 @@
+train_number,train_name,source,destination,total_seats
+12399,Mahamana Express,Varanasi,New Delhi,50
+12400,Mahamana Express,New Delhi,Varanasi,50
+12401,Magadh Express,Islampur,New Delhi,50
+12402,Magadh Express,New Delhi,Islampur,50
+12417,Prayagraj Express,Prayagraj,New Delhi,60
+12418,Prayagraj Express,New Delhi,Prayagraj,60
+12425,Jammu Tawi Rajdhani,New Delhi,Jammu Tawi,50
+12426,Jammu Tawi Rajdhani,Jammu Tawi,New Delhi,50
+12439,Ranchi Rajdhani Express,Ranchi,New Delhi,45
+12440,Ranchi Rajdhani Express,New Delhi,Ranchi,45
+12553,Vaishali Express,Saharsa,New Delhi,50
+12554,Vaishali Express,New Delhi,Saharsa,50
+12557,Sapt Kranti Express,Muzaffarpur,Anand Vihar,50
+12558,Sapt Kranti Express,Anand Vihar,Muzaffarpur,50
+12565,Bihar Sampark Kranti,Darbhanga,New Delhi,50
+12566,Bihar Sampark Kranti,New Delhi,Darbhanga,50
+12577,Bagmati Express,Darbhanga,Mysore,40
+12578,Bagmati Express,Mysore,Darbhanga,40
+12601,Mangala Lakshadweep Express,Goa,Hazrat Nizamuddin,45
+12602,Mangala Lakshadweep Express,Hazrat Nizamuddin,Goa,45
+12627,Karnataka Express,Bangalore,New Delhi,50
+12628,Karnataka Express,New Delhi,Bangalore,50
+12647,Kongu Express,Coimbatore,Hazrat Nizamuddin,45
+12648,Kongu Express,Hazrat Nizamuddin,Coimbatore,45
+12655,Navjeevan Express,Chennai Central,Ahmedabad,45
+12656,Navjeevan Express,Ahmedabad,Chennai Central,45
+12671,Nilgiris Express,Chennai Central,Mettupalayam,40
+12672,Nilgiris Express,Mettupalayam,Chennai Central,40
+12779,Goa Express,Vasco da Gama,Hazrat Nizamuddin,45
+12780,Goa Express,Hazrat Nizamuddin,Vasco da Gama,45
+12803,Visakhapatnam Express,Visakhapatnam,Hazrat Nizamuddin,45
+12804,Visakhapatnam Express,Hazrat Nizamuddin,Visakhapatnam,45
+12839,Howrah Chennai Mail,Howrah,Chennai Central,50
+12840,Howrah Chennai Mail,Chennai Central,Howrah,50
+12907,Maharashtra Sampark Kranti,Mumbai Bandra,Hazrat Nizamuddin,50
+12908,Maharashtra Sampark Kranti,Hazrat Nizamuddin,Mumbai Bandra,50
+12957,Suvarnajayanti Express,Ahmedabad,New Delhi,45
+12958,Suvarnajayanti Express,New Delhi,Ahmedabad,45
+12975,Mysore Express,Mysore,Jaipur,40
+12976,Mysore Express,Jaipur,Mysore,40
+13005,Howrah Amritsar Express,Howrah,Amritsar,40
+13006,Howrah Amritsar Express,Amritsar,Howrah,40
+13007,Udyan Aban Express,Howrah,Mathura,40
+13008,Udyan Aban Express,Mathura,Howrah,40
+13019,Bagh Express,Howrah,Kathgodam,40
+13020,Bagh Express,Kathgodam,Howrah,40
+13151,Jammu Tawi Express,Kolkata,Jammu Tawi,45
+13152,Jammu Tawi Express,Jammu Tawi,Kolkata,45
+13201,Rajendra Nagar Express,Patna,Lokmanya Tilak,45
+13202,Rajendra Nagar Express,Lokmanya Tilak,Patna,45
+13351,Dhanbad Alappuzha Express,Dhanbad,Alappuzha,40
+13352,Dhanbad Alappuzha Express,Alappuzha,Dhanbad,40
+14055,Brahmaputra Mail,Dibrugarh,Old Delhi,50
+14056,Brahmaputra Mail,Old Delhi,Dibrugarh,50
+14205,Faizabad Express,Kanpur,Delhi,40
+14206,Faizabad Express,Delhi,Kanpur,40
+15014,Ranikhet Express,Kathgodam,Jaisalmer,40
+15015,Gorakhpur Express,Gorakhpur,Yashvantpur,45
+15273,Satyagraha Express,Raxaul,Anand Vihar,40
+15274,Satyagraha Express,Anand Vihar,Raxaul,40
+15651,Lohit Express,Guwahati,Jammu Tawi,40
+15652,Lohit Express,Jammu Tawi,Guwahati,40
+15909,Avadh Assam Express,Dibrugarh,Lalgarh,45
+15910,Avadh Assam Express,Lalgarh,Dibrugarh,45
+16317,Himsagar Express,Kanyakumari,Shri Mata Vaishno Devi Katra,40
+16318,Himsagar Express,Shri Mata Vaishno Devi Katra,Kanyakumari,40
+16587,Bikaner Express,Yesvantpur,Bikaner,40
+16588,Bikaner Express,Bikaner,Yesvantpur,40
+17221,Kakinada Express,Kakinada,Mumbai,40
+17222,Kakinada Express,Mumbai,Kakinada,40
+18101,Tatanagar Jammu Tawi Express,Tatanagar,Jammu Tawi,40
+18102,Tatanagar Jammu Tawi Express,Jammu Tawi,Tatanagar,40
+18477,Kalinga Utkal Express,Puri,Haridwar,45
+18478,Kalinga Utkal Express,Haridwar,Puri,45
+19037,Avadh Express,Barauni,Ahmedabad,40
+19038,Avadh Express,Ahmedabad,Barauni,40
+19269,Porbandar Express,Porbandar,Muzaffarpur,40
+19270,Porbandar Express,Muzaffarpur,Porbandar,40
+19483,Ahmedabad Barauni Express,Ahmedabad,Barauni,40
+19484,Ahmedabad Barauni Express,Barauni,Ahmedabad,40
+20407,Chetak Express,Delhi Sarai Rohilla,Udaipur,45
+20408,Chetak Express,Udaipur,Delhi Sarai Rohilla,45
+20501,Tejas Rajdhani Express,Agartala,Anand Vihar,50
+20502,Tejas Rajdhani Express,Anand Vihar,Agartala,50
+22119,Tejas Express,Mumbai CSMT,Karmali,45
+22120,Tejas Express,Karmali,Mumbai CSMT,45
+22131,Pune New Delhi Tejas Express,Pune,New Delhi,45
+22132,Pune New Delhi Tejas Express,New Delhi,Pune,45
+22401,Delhi Sarai Rohilla Udhampur AC Express,Delhi Sarai Rohilla,Udhampur,45
+22402,Udhampur Delhi Sarai Rohilla AC Express,Udhampur,Delhi Sarai Rohilla,45
+22691,Rajdhani Express,KSR Bengaluru,Hazrat Nizamuddin,50
+22692,Rajdhani Express,Hazrat Nizamuddin,KSR Bengaluru,50
+22823,Bhubaneswar Rajdhani Express,Bhubaneswar,New Delhi,50
+22824,Bhubaneswar Rajdhani Express,New Delhi,Bhubaneswar,50
+12004,Kanpur Shatabdi,Kanpur,Delhi,50
+12301,Howrah Rajdhani Express,Howrah,New Delhi,60
+22435,Vande Bharat Express,Varanasi,Delhi,75
+12555,Gorakhdham Superfast Express,Gorakhpur,Delhi,60
+12034,Kanpur Anwarganj Shatabdi,Kanpur,Lucknow,40
+12951,Mumbai Rajdhani Express,Mumbai Central,New Delhi,60
+12423,Dibrugarh Rajdhani Express,Dibrugarh,New Delhi,50
+22415,Vande Bharat Express,Varanasi,New Delhi,40
+12625,Kerala Express,Trivandrum Central,New Delhi,50
+12801,Purushottam Express,Puri,New Delhi,40
+12002,Bhopal Shatabdi Express,New Delhi,Rani Kamlapati,50
+12925,Paschim Express,Mumbai Central,Amritsar,40
+12295,Sanghamitra Express,Bangalore City,Danapur,50
+12622,Tamil Nadu Express,New Delhi,Chennai Central,50
+12393,Sampoorna Kranti Express,Rajendra Nagar,New Delhi,60
+12953,August Kranti Rajdhani,Mumbai Central,Hazrat Nizamuddin,55
+12303,Poorva Express,Howrah,New Delhi,50
+12313,Sealdah Rajdhani Express,Sealdah,New Delhi,50
+12955,Mumbai Superfast Express,Mumbai Central,Jaipur,45
+12259,Sealdah Duronto Express,Sealdah,New Delhi,60
+12245,Howrah Duronto Express,Howrah,New Delhi,60
+12213,Yesvantpur Duronto Express,Yesvantpur,Delhi,50
+12273,Howrah Duronto Express,Howrah,Puri,40
+12289,Nagpur Duronto Express,Nagpur,Mumbai CSMT,45
+12239,Mumbai CSMT Duronto Express,Mumbai CSMT,Hisar,50
+22436,Vande Bharat Express,Delhi,Varanasi,75
+22416,Vande Bharat Express,New Delhi,Varanasi,40
+22425,Vande Bharat Express,Anand Vihar,Ayodhya,50
+22439,Vande Bharat Express,New Delhi,Katra,60
+22440,Vande Bharat Express,Katra,New Delhi,60
+20607,Vande Bharat Express,Chennai Central,Mysore,50
+20608,Vande Bharat Express,Mysore,Chennai Central,50
+20643,Vande Bharat Express,Chennai Central,Coimbatore,50
+20833,Vande Bharat Express,Visakhapatnam,Secunderabad,50
+20901,Vande Bharat Express,Mumbai Central,Gandhinagar,60
+20633,Vande Bharat Express,Kasargod,Trivandrum,50
+22301,Howrah Patna Vande Bharat,Howrah,Patna,50
+20171,Vande Bharat Express,Rani Kamlapati,Hazrat Nizamuddin,50
+12138,Punjab Mail,Firozpur Cantt,Mumbai CSMT,40
+12904,Golden Temple Mail,Amritsar,Mumbai Central,50
+12810,Howrah Mail,Howrah,Mumbai CSMT,45
+12616,Grand Trunk Express,New Delhi,Chennai Central,50
+12722,Dakshin Express,Hazrat Nizamuddin,Hyderabad,45
+12926,Paschim Express,Amritsar,Mumbai Central,40
+12321,Howrah Mumbai Mail,Howrah,Mumbai CSMT,40
+12860,Gitanjali Express,Howrah,Mumbai CSMT,50
+12137,Punjab Mail,Mumbai CSMT,Firozpur Cantt,40
+12903,Golden Temple Mail,Mumbai Central,Amritsar,50
+12809,Howrah Mail,Mumbai CSMT,Howrah,45
+12615,Grand Trunk Express,Chennai Central,New Delhi,50
+12721,Dakshin Express,Hyderabad,Hazrat Nizamuddin,45
+12322,Howrah Mumbai Mail,Mumbai CSMT,Howrah,40
+12859,Gitanjali Express,Mumbai CSMT,Howrah,50
+12556,Gorakhdham Express,Delhi,Gorakhpur,60
+12033,Kanpur Shatabdi,Lucknow,Kanpur,40
+12302,Howrah Rajdhani,New Delhi,Howrah,60
+12952,Mumbai Rajdhani,New Delhi,Mumbai Central,60
+12424,Dibrugarh Rajdhani,New Delhi,Dibrugarh,50
+12626,Kerala Express,New Delhi,Trivandrum Central,50
+12802,Purushottam Express,New Delhi,Puri,40
+12001,Bhopal Shatabdi,Rani Kamlapati,New Delhi,50
+12296,Sanghamitra Express,Danapur,Bangalore City,50
+12621,Tamil Nadu Express,Chennai Central,New Delhi,50
+12394,Sampoorna Kranti,New Delhi,Rajendra Nagar,60
+12954,August Kranti Rajdhani,Hazrat Nizamuddin,Mumbai Central,55
+12304,Poorva Express,New Delhi,Howrah,50
+12314,Sealdah Rajdhani,New Delhi,Sealdah,50
+12956,Mumbai Superfast,Jaipur,Mumbai Central,45
+12260,Sealdah Duronto,New Delhi,Sealdah,60
+12246,Howrah Duronto,New Delhi,Howrah,60
+12214,Yesvantpur Duronto,Delhi,Yesvantpur,50
+12274,Howrah Duronto,Puri,Howrah,40
+12290,Nagpur Duronto,Mumbai CSMT,Nagpur,45
+12240,Mumbai CSMT Duronto,Hisar,Mumbai CSMT,50
+22426,Vande Bharat Express,Ayodhya,Anand Vihar,50
+20609,Vande Bharat Express,Chennai Central,Vijayawada,50
+20610,Vande Bharat Express,Vijayawada,Chennai Central,50
+20644,Vande Bharat Express,Coimbatore,Chennai Central,50
+20834,Vande Bharat Express,Secunderabad,Visakhapatnam,50
+20902,Vande Bharat Express,Gandhinagar,Mumbai Central,60
+20634,Vande Bharat Express,Trivandrum,Kasargod,50
+22302,Howrah Patna Vande Bharat,Patna,Howrah,50
+20172,Vande Bharat Express,Hazrat Nizamuddin,Rani Kamlapati,50
+12003,Kanpur Shatabdi,Delhi,Kanpur,50
+12381,Poorva Express,Howrah,New Delhi,50
+12382,Poorva Express,New Delhi,Howrah,50
+12383,Asansol Express,Asansol,Mumbai,40
+12384,Asansol Express,Mumbai,Asansol,40
+12385,Bardhaman Express,Bardhaman,Hatia,40
+12386,Bardhaman Express,Hatia,Bardhaman,40
+12387,Dhanbad Express,Dhanbad,Howrah,40
+12388,Dhanbad Express,Howrah,Dhanbad,40
+12389,Gaya Express,Gaya,Chennai,45
+12390,Gaya Express,Chennai,Gaya,45
+12391,Patna Express,Patna,Bangalore,50
+12392,Patna Express,Bangalore,Patna,50
+12395,Rajendra Nagar Express,Rajendra Nagar,Delhi,50
+12396,Rajendra Nagar Express,Delhi,Rajendra Nagar,50
+12397,Mahabodhi Express,Gaya,New Delhi,50
+12398,Mahabodhi Express,New Delhi,Gaya,50
+12421,NCT Express,Kanpur,Delhi,45
+14151,Kanpur Anand Vihar Express,Kanpur,Delhi,50
